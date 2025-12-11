@@ -1,7 +1,8 @@
-<h2 align="center">CLARIFID: Improving Radiology Report Generation by Reinforcing Clinically Accurate Impressions and Enforcing Detailed Findings(ESWA 2026)</h2>
+<h2 align="center">CLARIFID: Improving Radiology Report Generation by Reinforcing Clinically Accurate Impressions and Enforcing Detailed Findings</h2>
 <p align="center">
 <a href="https://doi.org/10.1016/j.eswa.2025.130633"><img alt="Static Badge" src="https://img.shields.io/badge/Published%20in-ESWA-blue?style=flat-square&&link=10.1016%2Fj.eswa.2025.130633"></a>&nbsp;&nbsp;&nbsp;&nbsp;
     <a href="https://arxiv.org/abs/2507.17234"><img alt="Static Badge" src="https://img.shields.io/badge/Preprint-arXiv-%23B31B1B?style=flat-square&link=https%3A%2F%2Farxiv.org%2Fabs%2F2507.17234"></a></p>
+
 
 
 ---
