@@ -1,25 +1,44 @@
-<h1 align="center">CLARIFID: Improving Radiology Report Generation by Reinforcing Clinically Accurate Impressions and Enforcing Detailed Findings</h1>
+<h2 align="center">CLARIFID: Improving Radiology Report Generation by Reinforcing Clinically Accurate Impressions and Enforcing Detailed Findings(ESWA 2026)</h2>
 <p align="center">
 <a href="https://doi.org/10.1016/j.eswa.2025.130633"><img alt="Static Badge" src="https://img.shields.io/badge/Published%20in-ESWA-blue?style=flat-square&&link=10.1016%2Fj.eswa.2025.130633"></a>&nbsp;&nbsp;&nbsp;&nbsp;
     <a href="https://arxiv.org/abs/2507.17234"><img alt="Static Badge" src="https://img.shields.io/badge/Preprint-arXiv-%23B31B1B?style=flat-square&link=https%3A%2F%2Farxiv.org%2Fabs%2F2507.17234"></a></p>
 
 
-
 ---
-Official implementation for our paper:  
+Official implementation for our paper: 
 **"CLARIFID: Improving Radiology Report Generation by Reinforcing Clinically Accurate Impressions and Enforcing Detailed Findings"**
 
-> The paper is currently in pre-publication proofreading. We will update the paper link once the final version is officially released.
+CLARIFID enhances radiology report generation by explicitly modeling the expert workflow from Findings to Impression. The framework employs section-aware pretraining, CheXbert-guided fine-tuning, and multi-view fusion to produce clinically accurate and coherent reports. 
 
-CLARIFID enhances radiology report generation by explicitly modeling the expert workflow from Findings to Impression. The framework employs section-aware pretraining, CheXbert-guided PPO fine-tuning, and multi-view fusion to produce clinically accurate and coherent reports. 
+You can check out the paper here: 
 
-DOI: [10.1016/j.eswa.2025.130633](https://doi.org/10.1016/j.eswa.2025.130633)
+- **[Published Version (ESWA)](https://doi.org/10.1016/j.eswa.2025.130633)**
+- **[arXiv Preprint](https://arxiv.org/abs/2507.17234)**
+
+## Cite
+
+If you find our work useful in your projects, please consider citing our paper:
+
+```markdown
+@article{LEE2026130633,
+title = {CLARIFID: Improving radiology report generation by reinforcing clinically accurate impressions and enforcing detailed findings},
+journal = {Expert Systems with Applications},
+volume = {303},
+pages = {130633},
+year = {2026},
+issn = {0957-4174},
+doi = {https://doi.org/10.1016/j.eswa.2025.130633},
+url = {https://www.sciencedirect.com/science/article/pii/S0957417425042484},
+author = {Kyeongkyu Lee and Seonghwan Yoon and Hongki Lim},
+keywords = {Radiology report generation, Reinforcement learning, Test time computation}
+}
+```
 
 ---
 
 ## Overview
 
-This repository provides the implementation for our radiology report generation model.  
+This repository provides the implementation for our radiology report generation model. 
 The workflow consists of:
 
 1. **Dataset preprocessing** (`dataset_preprocessing.py`)
@@ -46,7 +65,7 @@ Please download the following datasets:
 
 ### Preprocessed Data File
 
-The preprocessed CSV file is listed below.  
+The preprocessed CSV file is listed below. 
 Due to the MIMIC-CXR data usage license, we cannot release the processed files for MIMIC-CXR.
 
 * [IU X-Ray](https://drive.google.com/file/d/1OL11Y2HBjuQZmZE7hqH3pecK1aeLHjkB/view?usp=sharing)
@@ -65,16 +84,4 @@ Due to the MIMIC-CXR data usage license, we cannot release the processed files f
 * Clone and install `pycocoevalcap` for metric evaluation.
 
 * To compute the CE metric, please download the [CheXbert](https://github.com/stanfordmlgroup/CheXbert) checkpoint.
-
----
-
-## Cite
-
-If you find our work useful in your projects, please consider citing our paper:
-
-```json
-The paper is currently in pre-publication proofreading. We will update the BibTeX once the final version is officially released.
-```
-
-
 
