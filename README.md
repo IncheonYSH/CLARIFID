@@ -42,10 +42,25 @@ keywords = {Radiology report generation, Reinforcement learning, Test time compu
 This repository provides the implementation for our radiology report generation model. 
 The workflow consists of:
 
-1. **Dataset preprocessing** (`dataset_preprocessing.py`)
-2. **Pretraining** (`pretrain.py`)
-3. **Post-training** (`posttrain.py`)
-4. **Evaluation** (`evaluate.py`)
+0. **Dataset preprocessing** (`dataset_preprocessing.py`)
+
+1. **Pretraining** (`pretrain.py`)
+
+   The model is pretrained with explicit section conditioning to distinguish between Findings and Impression, enabling better structural and semantic separation of the two sections.
+
+   <img src="./image/01.png" alt="01" style="zoom:50%;" />
+
+2. **Post-training** (`posttrain.py`)
+
+   During post-training, CheXbert is used as a clinical expert to guide the model toward generating clinically accurate impressions. This process reinforces correct disease mentions and reduces clinically inconsistent predictions.
+
+   <img src="./image/02.png" alt="02" style="zoom:50%;" />
+
+3. **Evaluation** (`evaluate.py`)
+
+   During inference, next-token forcing is applied to ensure sufficient Findings generation before transitioning to the Impression section. Multiple candidate reports are then sampled and the final output is selected via Best-of-N re-ranking using the trained value model. Evaluation is conducted using standard report generation metrics and CheXbert-based clinical metrics.
+
+   <img src="./image/03.png" alt="03" style="zoom:50%;" />
 
 ---
 
